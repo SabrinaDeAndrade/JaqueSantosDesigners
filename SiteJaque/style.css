@@ -1,0 +1,106 @@
+        :root {
+            --cor-branco: #ff0000;
+            --cor-preto: #ffffff; /*TEXTO DO FOOTER E DA NAVBAR*/
+            /*--cor-cinza: #b69174; /* BACKGROUND BODY */
+            --cor-marrom-claro: #603a00; /* FOOTER E NAVBAR */
+            --cor-texto: #333333;
+            --cor-destaque: #ff7700;  /*COR DAS CAIXAS DE TEXTO*/
+        }
+
+        body {
+    background-image: url(public/FUNDO3.jpg);
+    background-repeat: no-repeat;   /* Não repete a imagem */
+    background-size: cover;         /* Faz a imagem cobrir 100% da tela */
+    background-position: center;    /* Centraliza a imagem */
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+        .main-content {
+            background-color: var(--cor-cinza);
+            padding-bottom: 3rem; /* Espaçamento extra no final do container cinza */
+        }
+
+        .navbar {
+            /* Cor marrom claro para a Navbar */
+            background-color: var(--cor-marrom-claro) !important;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: var(--cor-preto) !important; 
+            font-weight: 500;
+        }
+
+        .card {
+            /* CORREÇÃO APLICADA: Fundo dos blocos de texto (Card) com marrom claro */
+            background-color: var(--cor-marrom-claro);
+            border-radius: 8px;
+            /* Cor do texto dentro do card para contraste */
+            color: var(--cor-preto); 
+        }
+
+        .card-title {
+            color: var(--cor-destaque);
+            font-weight: 600;
+        }
+
+        /* Estilos do Carrossel */
+        .carousel-caption {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            color: var(--cor-branco);
+            text-align: center;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-caption {
+                position: static; 
+                padding-top: 5px;
+                padding-bottom: 5px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .carousel-caption p {
+                display: none; 
+            }
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: var(--cor-marrom-claro);
+            border-radius: 50%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .carousel {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Rodapé Personalizado */
+        .footer {
+            background-color: var(--cor-marrom-claro);
+            color: var(--cor-preto);
+            padding: 1rem 0;
+            margin-top: auto; 
+        }
+        .footer a {
+            color: var(--cor-preto);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            color: var(--cor-destaque);
+        }
+ 
